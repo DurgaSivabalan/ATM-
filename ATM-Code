@@ -1,0 +1,47 @@
+import java.util.*;
+class Main{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int Balance=10000;
+		int takeamount=0;
+		int depositamount=0;
+		System.out.println("Enter your Name:");
+		String Name=sc.next();
+		System.out.println("Welcome "+Name);
+		System.out.println("How can We help you?\n 1.Check Balance\n 2.Amount Deposit\n 3.Amount Debit\n 4.Receipt\n 5.Exit");
+		System.out.println("Enter Your choice:");
+		int ch=sc.nextInt();
+		do
+		{
+			switch(ch)
+			{
+			case 1:
+				System.out.println("Your Current Balance is "+Balance);
+				break;
+			case 2:
+				System.out.println("How much of Amount do you want to credit?");
+				depositamount=sc.nextInt();
+				System.out.println("The amount was Successfully Credited!!");
+				Balance=Balance+depositamount;
+				break;
+			case 3:
+				System.out.println("How much of amount do you want to debit?");
+				takeamount=sc.nextInt();
+				System.out.println("Your requested amount is debited successfully!!");
+				Balance=Balance-takeamount;
+				break;
+			case 4:
+				System.out.println("Your Current Balance is "+Balance);
+				System.out.println("The amount you credited in your account is "+depositamount);
+				System.out.println("The amount you debitted from your account is "+takeamount);
+				System.out.println("Thanks for visiting us...");
+				break;
+			case 5:
+				break;
+			}
+
+}
+while(ch==5);
+}
+}
